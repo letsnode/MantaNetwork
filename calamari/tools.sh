@@ -55,6 +55,7 @@ update() {
 
 # Actions
 sudo apt install wget -y &>/dev/null
+. /root/.bash_profile
 . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
 cd
 $function
