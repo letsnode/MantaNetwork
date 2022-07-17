@@ -3,12 +3,12 @@
 function="install"
 
 # Options
-. <(wget -qO- https://raw.githubusercontent.com/Secord0/utils/main/colors.sh) --
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/utils/main/bashbuilder/colors.sh) --
 option_value(){ echo "$1" | sed -e 's%^--[^=]*=%%g; s%^-[^=]*=%%g'; }
 while test $# -gt 0; do
 	case "$1" in
 	-h|--help)
-		. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
+		. <(wget -qO- https://raw.githubusercontent.com/letsnode/utils/main/bashbuilder/logo.sh)
 		echo
 		echo -e "${C_LGn}Functionality${RES}: the script performs many actions related to a Calamari node"
 		echo
@@ -19,7 +19,7 @@ while test $# -gt 0; do
 		echo -e "  -u,  --update  update the node"
 		echo
 		echo -e "${C_LGn}Useful URLs${RES}:"
-		echo -e "https://github.com/letsnode/MantaNetwork/calamari/tools.sh — script URL"
+		echo -e "https://raw.githubusercontent.com/letsnode/MantaNetwork/calamari/tools.sh — script URL"
 		echo -e "https://t.me/letskynode — node Community"
 		echo -e "https://teletype.in/@letskynode — guides and articles"
 		echo
@@ -56,6 +56,6 @@ update() {
 # Actions
 sudo apt install wget -y &>/dev/null
 . /root/.bash_profile
-. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/logo.sh)
+. <(wget -qO- https://raw.githubusercontent.com/letsnode/utils/main/bashbuilder/logo.sh)
 cd
 $function
